@@ -1,5 +1,5 @@
 import './portfolio.scss'
-import { Card, Container, Ratio } from 'react-bootstrap'
+import { Button, Card, Container, Ratio } from 'react-bootstrap'
 import Image from 'react-bootstrap/Image'
 import jpgBlog from '../../assets/img/blog.jpg'
 import jpgPortfolio from '../../assets/img/porfolio.jpg'
@@ -8,7 +8,7 @@ import jpgSandwiches from '../../assets/img/sandwiches.jpg'
 import jpgVestfrost from '../../assets/img/vestfrost.jpg'
 import jpgSharp from '../../assets/img/sharp.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBootstrap, faGithub, faJs, faReact, faSass } from '@fortawesome/free-brands-svg-icons'
+import { faBootstrap, faGithub, faJs, faReact, faSass, faThemeco } from '@fortawesome/free-brands-svg-icons'
 import {
   faBriefcase, faEnvelope,
   faFileExport, faFileInvoice, faList,
@@ -29,7 +29,7 @@ function Portfolio() {
       <Container>
         <div className='grid'>
           <div className='grid-item grid-item1'>
-            <a href={urlBlog} target='_blank' rel="noopener noreferrer">
+            <a href={urlBlog} target='_blank'>
               <Ratio className={'ratio-card'}>
                 <div className='card'>
                   <div className='card-inner'>
@@ -50,7 +50,7 @@ function Portfolio() {
                             <li><FontAwesomeIcon icon={faMobile} color='#000' />Mobile First</li>
                             <li><FontAwesomeIcon icon={faSpinner} color='#000' />Static content loading</li>
                           </ul>
-                          <Card.Link target='_blank' rel="noopener noreferrer" className={'btn btn-dark'} href={urlBlog}>Link Repo</Card.Link>
+                          <Card.Link target='_blank' className={'btn btn-dark'} href={urlBlog}>Link Repo</Card.Link>
                         </Card.Body>
                       </Card>
                     </div>
@@ -60,7 +60,7 @@ function Portfolio() {
             </a>
           </div>
           <div className='grid-item grid-item2'>
-            <a href={urlPortfolio} target='_blank' rel="noopener noreferrer">
+            <a href={urlPortfolio} target='_blank'>
               <Ratio className={'ratio-card'}>
                 <div className='card'>
                   <div className='card-inner'>
@@ -93,7 +93,7 @@ function Portfolio() {
             </a>
           </div>
           <div className='grid-item grid-item3'>
-            <a href={urlGitHub} target='_blank' rel="noopener noreferrer">
+            <a href={urlGitHub} target='_blank'>
               <Ratio className={'ratio-card'}>
                 <div className='card'>
                   <div className='card-inner'>
@@ -118,7 +118,7 @@ function Portfolio() {
             </a>
           </div>
           <div className='grid-item grid-item4'>
-            <a href={urlSandwiches} target='_blank' rel="noopener noreferrer">
+            <a href={urlSandwiches} target='_blank'>
               <Ratio className={'ratio-card'}>
                 <div className='card'>
                   <div className='card-inner'>

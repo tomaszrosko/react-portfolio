@@ -26,6 +26,7 @@
 
   .grid-item {
     background-color: #023048;
+    //aspect-ratio: 16/9;
   }
 
   .grid-item1 {
@@ -115,6 +116,7 @@
   ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: start;
 
     li {
       margin-top: 5px;
