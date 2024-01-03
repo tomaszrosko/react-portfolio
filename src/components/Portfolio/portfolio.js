@@ -1,28 +1,32 @@
-import './portfolio.scss'
-import { Card, Container, Ratio } from 'react-bootstrap'
-import Image from 'react-bootstrap/Image'
-import jpgBlog from '../../assets/img/blog.jpg'
-import jpgPortfolio from '../../assets/img/porfolio.jpg'
-import jpgShopSample from '../../assets/img/shopSample.jpg'
-import jpgSandwiches from '../../assets/img/sandwiches.jpg'
-import jpgVestfrost from '../../assets/img/vestfrost.jpg'
-import jpgSharp from '../../assets/img/sharp.jpg'
-import svgTailwindCss from '../../assets/img/svg/tailwindCssIcon.svg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBootstrap, faJs, faReact, faSass, } from '@fortawesome/free-brands-svg-icons'
+import './portfolio.scss';
+import { Card, Container, Ratio } from 'react-bootstrap';
+import Image from 'react-bootstrap/Image';
+import jpgBlog from '../../assets/img/blog.jpg';
+import jpgPortfolio from '../../assets/img/porfolio.jpg';
+import jpgShopSample from '../../assets/img/shopSample.jpg';
+import jpgSandwiches from '../../assets/img/sandwiches.jpg';
+import jpgVestfrost from '../../assets/img/vestfrost.jpg';
+import jpgSharp from '../../assets/img/sharp.jpg';
+import svgTailwindCss from '../../assets/img/svg/tailwindCssIcon.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBootstrap, faJs, faReact, faSass, } from '@fortawesome/free-brands-svg-icons';
 import {
   faBriefcase, faEnvelope,
   faFileExport, faFileInvoice, faList,
   faMap,
   faMobile,
   faSpinner, faXmark,
-} from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom'
+} from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
-const urlBlog = 'https://www.magdalenarosko.pl'
-const urlPortfolio = 'https://www.tomaszrosko.pl'
-const urlSandwiches = 'https://github.com/tomaszrosko/reactjs-making-sandwich/tree/develop'
-const urlShopSample = 'https://react-shop-sample.netlify.app/'
+const urlBlog = 'https://www.magdalenarosko.pl';
+const urlPortfolio = 'https://www.tomaszrosko.pl';
+const urlShopSample = 'https://react-shop-sample.netlify.app/';
+
+const urlBlogGitHub = 'https://github.com/tomaszrosko/react-blog/tree/dev';
+const urlPortfolioGitHub = 'https://github.com/tomaszrosko/react-portfolio/tree/dev';
+const urlSandwichesGitHub = 'https://github.com/tomaszrosko/reactjs-making-sandwich/tree/develop';
+const urlShopSampleGitHub = 'https://github.com/tomaszrosko/react-shop-sample/tree/dev';
 
 function Portfolio() {
   return (
@@ -51,7 +55,7 @@ function Portfolio() {
                             <li><FontAwesomeIcon icon={faMobile} color='#000' />Mobile First</li>
                             <li><FontAwesomeIcon icon={faSpinner} color='#000' />Static content loading</li>
                           </ul>
-                          <Card.Link target='_blank' className={'btn btn-dark'} href={urlPortfolio}>Link Repo</Card.Link>
+                          <Card.Link target='_blank' className={'btn btn-dark'} href={urlBlogGitHub}>Link Repo</Card.Link>
                         </Card.Body>
                       </Card>
                     </div>
@@ -83,8 +87,7 @@ function Portfolio() {
                             <li><FontAwesomeIcon icon={faFileExport} color='#000' />Json</li>
                             <li><FontAwesomeIcon icon={faMobile} color='#000' />Mobile First</li>
                           </ul>
-                          <Card.Link target='_blank' className={'btn btn-dark'} href={urlPortfolio}>Link
-                            Repo</Card.Link>
+                          <Card.Link target='_blank' className={'btn btn-dark'} href={urlPortfolioGitHub}>Link Repo</Card.Link>
                         </Card.Body>
                       </Card>
                     </div>
@@ -111,8 +114,7 @@ function Portfolio() {
                             <li><FontAwesomeIcon icon={faSass} color='#000'/>Sass</li>
                             <li><FontAwesomeIcon icon={faJs} color='#000'/>Java Script</li>
                           </ul>
-                          <Card.Link target='_blank' className={'btn btn-dark'} href={urlShopSample}>Link
-                            Repo</Card.Link>
+                          <Card.Link target='_blank' className={'btn btn-dark'} href={urlShopSampleGitHub}>Link Repo</Card.Link>
                         </Card.Body>
                       </Card>
                     </div>
@@ -122,7 +124,7 @@ function Portfolio() {
             </a>
           </div>
           <div className='grid-item grid-item4'>
-            <a href={urlSandwiches} target='_blank'>
+            <a href={urlSandwichesGitHub} target='_blank'>
               <Ratio className={'ratio-card'}>
                 <div className='card'>
                   <div className='card-inner'>
@@ -139,8 +141,7 @@ function Portfolio() {
                             <li><FontAwesomeIcon icon={faList} color='#000' />Automatic order summary</li>
                             <li><FontAwesomeIcon icon={faXmark} color='#000' />Dynamic deletion</li>
                           </ul>
-                          <Card.Link target='_blank' className={'btn btn-dark'} href={urlSandwiches}>Link
-                            Repo</Card.Link>
+                          <Card.Link target='_blank' className={'btn btn-dark'} href={urlSandwichesGitHub}>Link Repo</Card.Link>
                         </Card.Body>
                       </Card>
                     </div>
@@ -175,7 +176,6 @@ function Portfolio() {
             </Link>
           </div>
           <div className='grid-item grid-item6'>
-            {/*<a href={urlSharp} target="_blank">*/}
             <Link className='contact-link' to='/contact'>
               <Ratio className={'ratio-card'}>
                 <div className='card'>
