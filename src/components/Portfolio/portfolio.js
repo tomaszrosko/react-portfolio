@@ -1,14 +1,15 @@
 import './portfolio.scss'
-import { Button, Card, Container, Ratio } from 'react-bootstrap'
+import { Card, Container, Ratio } from 'react-bootstrap'
 import Image from 'react-bootstrap/Image'
 import jpgBlog from '../../assets/img/blog.jpg'
 import jpgPortfolio from '../../assets/img/porfolio.jpg'
-import jpgGitHub from '../../assets/img/gitHub.jpg'
+import jpgShopSample from '../../assets/img/shopSample.jpg'
 import jpgSandwiches from '../../assets/img/sandwiches.jpg'
 import jpgVestfrost from '../../assets/img/vestfrost.jpg'
 import jpgSharp from '../../assets/img/sharp.jpg'
+import svgTailwindCss from '../../assets/img/svg/tailwindCssIcon.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBootstrap, faGithub, faJs, faReact, faSass, faThemeco } from '@fortawesome/free-brands-svg-icons'
+import { faBootstrap, faJs, faReact, faSass, } from '@fortawesome/free-brands-svg-icons'
 import {
   faBriefcase, faEnvelope,
   faFileExport, faFileInvoice, faList,
@@ -20,8 +21,8 @@ import { Link } from 'react-router-dom'
 
 const urlBlog = 'https://www.magdalenarosko.pl'
 const urlPortfolio = 'https://www.tomaszrosko.pl'
-const urlGitHub = 'https://github.com/tomaszrosko'
 const urlSandwiches = 'https://github.com/tomaszrosko/reactjs-making-sandwich/tree/develop'
+const urlShopSample = 'https://react-shop-sample.netlify.app/'
 
 function Portfolio() {
   return (
@@ -50,7 +51,7 @@ function Portfolio() {
                             <li><FontAwesomeIcon icon={faMobile} color='#000' />Mobile First</li>
                             <li><FontAwesomeIcon icon={faSpinner} color='#000' />Static content loading</li>
                           </ul>
-                          <Card.Link target='_blank' className={'btn btn-dark'} href={urlBlog}>Link Repo</Card.Link>
+                          <Card.Link target='_blank' className={'btn btn-dark'} href={urlPortfolio}>Link Repo</Card.Link>
                         </Card.Body>
                       </Card>
                     </div>
@@ -93,21 +94,24 @@ function Portfolio() {
             </a>
           </div>
           <div className='grid-item grid-item3'>
-            <a href={urlGitHub} target='_blank'>
+            <a href={urlShopSample} target='_blank'>
               <Ratio className={'ratio-card'}>
                 <div className='card'>
                   <div className='card-inner'>
                     <div className='card-front'>
-                      <Image src={jpgGitHub} fluid title='GitHub' alt='GitHub' width='650' height='366' />
+                      <Image src={jpgShopSample} fluid title='React shop sample' alt='React shop sample' width='650' height='366' />
                     </div>
                     <div className='card-back'>
                       <Card style={{ width: '18rem' }}>
-                        <Card.Img variant='top' src={jpgGitHub} />
+                        <Card.Img variant='top' src={jpgShopSample} />
                         <Card.Body>
                           <ul className={'list-unstyled p-2'}>
-                            <li><FontAwesomeIcon icon={faGithub} color='#000' />GitHub</li>
+                            <li><FontAwesomeIcon icon={faReact} color='#000'/>React</li>
+                            <li><img src={svgTailwindCss} alt="Tailwind Css" title="Tailwind Css"/>Tailwind Css</li>
+                            <li><FontAwesomeIcon icon={faSass} color='#000'/>Sass</li>
+                            <li><FontAwesomeIcon icon={faJs} color='#000'/>Java Script</li>
                           </ul>
-                          <Card.Link target='_blank' className={'btn btn-dark'} href={urlGitHub}>Link
+                          <Card.Link target='_blank' className={'btn btn-dark'} href={urlShopSample}>Link
                             Repo</Card.Link>
                         </Card.Body>
                       </Card>
