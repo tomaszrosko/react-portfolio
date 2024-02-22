@@ -36,7 +36,7 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-          <span>Copyright © 2023 Tomasz Rośko</span>
+          <span>Copyright © 2024 Tomasz Rośko</span>
         </Col>
       </Row>
     </Container>
