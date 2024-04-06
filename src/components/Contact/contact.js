@@ -5,12 +5,13 @@ import { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import ReCAPTCHA from 'react-google-recaptcha';
 
+const reCAPTCHA_KEY = process.env.React_App_RECAPTCHA_KEY;
+
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [subject, setSubject] = useState('');
-  const reCAPTCHA_KEY = process.env.React_App_reCAPTCHA_KEY;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -107,7 +108,6 @@ const Contact = () => {
                         ></textarea>
                       </li>
                       <li className='half'>
-                        {/* Dodaj reCAPTCHA */}
                         <ReCAPTCHA sitekey={reCAPTCHA_KEY} onChange={handleReCAPTCHAChange} />
                       </li>
                       <li className='half'>
