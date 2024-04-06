@@ -46,7 +46,6 @@ const Contact = () => {
   }
   return (
     <>
-      console.log(process.env.React_App_SERVICE_ID)
       <section className={'contact'}>
         <div className='container contact-page'>
           <div className='tags top-tags-html'>&lt;html&gt;</div>
