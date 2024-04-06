@@ -1,22 +1,26 @@
-import './contact.scss'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import emailjs from '@emailjs/browser'
-import { useState } from 'react'
-import { Col, Row } from 'react-bootstrap'
+import './contact.scss';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
+import { Col, Row } from 'react-bootstrap';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Contact = () => {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  const [subject, setSubject] = useState('')
-  const btnSend = document.querySelector('#btnId')
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [subject, setSubject] = useState('');
+  const reCAPTCHA_KEY = process.env.React_App_reCAPTCHA_KEY;
 
   const handleSubmit = (e) => {
-    btnSend.value = 'Sending...'
-    e.preventDefault()
+    e.preventDefault();
 
-    // Your EmailJJ Date
+    if (!reCAPTCHAValue) {
+      alert('Please verify that you are not a robot.');
+      return;
+    }
 
+    // Your EmailJS Data
     const serviceId = process.env.React_App_SERVICE_ID;
     const templateId = process.env.React_App_TEMPLATE_ID;
     const publicKey = process.env.React_App_PUBLIC_KEY;
@@ -28,22 +32,29 @@ const Contact = () => {
       from_subject: subject,
       to_name: 'Tomasz',
       message: message,
-    }
+    };
 
-    //Send Email
+    // Send Email
     emailjs.send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
-        alert('Email sent successfully!')
-        btnSend.value = 'Send Email....'
-        setName('')
-        setEmail('')
-        setMessage('')
-        setSubject('')
+        alert('Email sent successfully!');
+        setName('');
+        setEmail('');
+        setMessage('');
+        setSubject('');
+        setReCAPTCHAValue('');
       })
       .catch((error) => {
-        alert('Error sending email')
-      })
-  }
+        alert('Error sending email');
+      });
+  };
+
+  const [reCAPTCHAValue, setReCAPTCHAValue] = useState('');
+
+  const handleReCAPTCHAChange = (value) => {
+    setReCAPTCHAValue(value);
+  };
+
   return (
     <>
       <section className={'contact'}>
@@ -57,29 +68,50 @@ const Contact = () => {
                   <form onSubmit={handleSubmit} className='emailForms'>
                     <ul>
                       <li className='half'>
-                        <input type='text' name='name' placeholder='Name' value={name}
-                               onChange={(e) => setName(e.target.value)} required />
+                        <input
+                          type='text'
+                          name='name'
+                          placeholder='Name'
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
+                          required
+                        />
                       </li>
                       <li className='half'>
-                        <input type='text' name='email' placeholder='Email' value={email}
-                               onChange={(e) => setEmail(e.target.value)} required />
+                        <input
+                          type='text'
+                          name='email'
+                          placeholder='Email'
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          required
+                        />
                       </li>
                       <li className='half'>
-                        <input type='text' name='subject' placeholder='Subject' value={subject}
-                               onChange={(e) => setSubject(e.target.value)} required />
+                        <input
+                          type='text'
+                          name='subject'
+                          placeholder='Subject'
+                          value={subject}
+                          onChange={(e) => setSubject(e.target.value)}
+                          required
+                        />
                       </li>
                       <li className='half'>
-                <textarea
-                  placeholder='Message'
-                  name='message'
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  required>
-
-                </textarea>
+                        <textarea
+                          placeholder='Message'
+                          name='message'
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
+                          required
+                        ></textarea>
                       </li>
                       <li className='half'>
-                        <input type='submit' className='flat-button btn-send' id={'btnId'} value='SEND :)'></input>
+                        {/* Dodaj reCAPTCHA */}
+                        <ReCAPTCHA sitekey={reCAPTCHA_KEY} onChange={handleReCAPTCHAChange} />
+                      </li>
+                      <li className='half'>
+                        <input type='submit' className='flat-button btn-send' id={'btnId'} value='SEND :)' />
                       </li>
                     </ul>
                   </form>
@@ -106,8 +138,7 @@ const Contact = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Contact
-
+export default Contact;
