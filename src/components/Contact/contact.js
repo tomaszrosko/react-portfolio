@@ -16,9 +16,10 @@ const Contact = () => {
     e.preventDefault()
 
     // Your EmailJJ Date
-    const serviceId = 'service_n3te7ha'
-    const templateId = 'template_66eoawu'
-    const publicKey = 'c9VpQvtgGoU6yj2i6'
+
+    const serviceId = process.env.React_App_SERVICE_ID;
+    const templateId = process.env.React_App_TEMPLATE_ID;
+    const publicKey = process.env.React_App_PUBLIC_KEY;
 
     // New Object
     const templateParams = {
@@ -45,6 +46,7 @@ const Contact = () => {
   }
   return (
     <>
+      console.log(process.env.React_App_SERVICE_ID)
       <section className={'contact'}>
         <div className='container contact-page'>
           <div className='tags top-tags-html'>&lt;html&gt;</div>
