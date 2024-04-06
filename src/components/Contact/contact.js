@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import ReCAPTCHA from 'react-google-recaptcha';
 
-const reCAPTCHA_KEY = process.env.React_App_RECAPTCHA_KEY;
+const RECAPTCHA_KEY = process.env.React_App_RECAPTCHA_KEY;
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -108,7 +108,7 @@ const Contact = () => {
                         ></textarea>
                       </li>
                       <li className='half'>
-                        <ReCAPTCHA sitekey={reCAPTCHA_KEY} onChange={handleReCAPTCHAChange} />
+                        <ReCAPTCHA sitekey={RECAPTCHA_KEY} onChange={handleReCAPTCHAChange} />
                       </li>
                       <li className='half'>
                         <input type='submit' className='flat-button btn-send' id={'btnId'} value='SEND :)' />
