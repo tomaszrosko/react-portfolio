@@ -1,15 +1,8 @@
 import './contact.scss';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import emailjs from '@emailjs/browser';
-import { useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
-import ReCAPTCHA from 'react-google-recaptcha';
+import { Row } from 'react-bootstrap';
 
 import Map from './components/map';
 import TextZone from './components/textZone'
-
-
-
 
 const Contact = () => {
 
