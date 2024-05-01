@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom'
 import './home.scss'
 import { useState } from 'react'
-import AnimatedLetters from '../AnimatedLetters/animatedLetters'
+import AnimatedLetters from './AnimatedLetters/animatedLetters'
 import { Col, Row } from 'react-bootstrap'
 
 const Home = () => {
   const [letterClass] = useState('text-animate')
-  const nameArray = ['o', 'm', 'a', 's', 'z']
 
   return (
     <section className={'home'}>
@@ -23,9 +22,7 @@ const Home = () => {
                 <span className={`${letterClass} _14`}>'m</span>
                 <span className={'firstName'}>
                   <span className={'letterT'}>t</span>
-                  <AnimatedLetters letterClass={letterClass}
-                                   strArray={nameArray}
-                                   idx={15} />
+                  <AnimatedLetters/>
                   </span>
                 <br />
                 <h2><i>Frontend Developer</i></h2>
