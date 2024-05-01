@@ -9,6 +9,13 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { Col, Row } from 'react-bootstrap'
 
+const icCubeFace1 = faSlack;
+const icCubeFace2 = faHtml5;
+const icCubeFace3 = faCss3;
+const icCubeFace4 = faReact;
+const icCubeFace5 = faJsSquare;
+const icCubeFace6 = faGitAlt;
+
 const About = () => {
 
   return (
@@ -29,23 +36,23 @@ const About = () => {
           <Col xs={12} md={6}>
             <div className='stage-cube-cont'>
               <div className='cubespinner'>
-                <div className='face1'>
-                  <FontAwesomeIcon icon={faSlack} color='#DD0031' />
+                <div className='cubeFace1'>
+                  <FontAwesomeIcon icon={icCubeFace1} />
                 </div>
-                <div className='face2'>
-                  <FontAwesomeIcon icon={faHtml5} color='#F06529' />
+                <div className='cubeFace2'>
+                  <FontAwesomeIcon icon={icCubeFace2} />
                 </div>
-                <div className='face3'>
-                  <FontAwesomeIcon icon={faCss3} color='#28A4D9' />
+                <div className='cubeFace3'>
+                  <FontAwesomeIcon icon={icCubeFace3} />
                 </div>
-                <div className='face4'>
-                  <FontAwesomeIcon icon={faReact} color='#5ED4F4' />
+                <div className='cubeFace4'>
+                  <FontAwesomeIcon icon={icCubeFace4} />
                 </div>
-                <div className='face5'>
-                  <FontAwesomeIcon icon={faJsSquare} color='#EFD81D' />
+                <div className='cubeFace5'>
+                  <FontAwesomeIcon icon={icCubeFace5} />
                 </div>
-                <div className='face6'>
-                  <FontAwesomeIcon icon={faGitAlt} color='#EC4D28' />
+                <div className='cubeFace6'>
+                  <FontAwesomeIcon icon={icCubeFace6} />
                 </div>
               </div>
             </div>

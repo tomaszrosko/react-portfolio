@@ -2,6 +2,13 @@
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
 
+$color-cubeFace1: #dd0031;
+$color-cubeFace2: #f06529;
+$color-cubeFace3: #28a4d9;
+$color-cubeFace4: #5ed4f4;
+$color-cubeFace5: #efd81d;
+$color-cubeFace6: #ec4d28;
+
 .about {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -62,29 +69,29 @@
       align-items: center;
     }
 
-    .face1 {
+    .cubeFace1 {
       transform: translateZ(100px);
-      color: #dd0031;
+      color: $color-cubeFace1;
     }
-    .face2 {
+    .cubeFace2 {
       transform: rotateY(90deg) translateZ(100px);
-      color: #f06529;
+      color: $color-cubeFace2;
     }
-    .face3 {
+    .cubeFace3 {
       transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
-      color: #28a4d9;
+      color: $color-cubeFace3;
     }
-    .face4 {
+    .cubeFace4 {
       transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
-      color: #5ed4f4;
+      color: $color-cubeFace4;
     }
-    .face5 {
+    .cubeFace5 {
       transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
-      color: #efd81d;
+      color: $color-cubeFace5;
     }
-    .face6 {
+    .cubeFace6 {
       transform: rotateX(-90deg) translateZ(100px);
-      color: #ec4d28;
+      color: $color-cubeFace6;
     }
   }
 
