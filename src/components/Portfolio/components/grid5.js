@@ -21,13 +21,10 @@ function Grid5() {
                                     <Card.Img variant='top' src={jpgVestfrost}/>
                                     <Card.Body>
                                         <ul className={'list-unstyled p-2'}>
-                                            <li><FontAwesomeIcon icon={faBriefcase} color='#000'/>Commercial
-                                            </li>
-                                            <li><FontAwesomeIcon icon={faFileInvoice} color='#000'/>Theme
-                                            </li>
+                                            <li><FontAwesomeIcon icon={faBriefcase} />Commercial</li>
+                                            <li><FontAwesomeIcon icon={faFileInvoice} />Theme</li>
                                         </ul>
-                                        <Link className='btn btn-dark' to='/contact'>More info - contact
-                                            me</Link>
+                                        <Link className='btn btn-dark' to='/contact'>More info - contactme</Link>
                                     </Card.Body>
                                 </Card>
                             </div>

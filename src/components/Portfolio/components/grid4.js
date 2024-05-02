@@ -23,14 +23,10 @@ function Grid4() {
                                     <Card.Img variant='top' src={jpgSandwiches}/>
                                     <Card.Body>
                                         <ul className={'list-unstyled p-2'}>
-                                            <li><FontAwesomeIcon icon={faReact} color='#000'/>React</li>
-                                            <li><FontAwesomeIcon icon={faSass} color='#000'/>Sass</li>
-                                            <li><FontAwesomeIcon icon={faList} color='#000'/>Automatic order
-                                                summary
-                                            </li>
-                                            <li><FontAwesomeIcon icon={faXmark} color='#000'/>Dynamic
-                                                deletion
-                                            </li>
+                                            <li><FontAwesomeIcon icon={faReact} />React</li>
+                                            <li><FontAwesomeIcon icon={faSass} />Sass</li>
+                                            <li><FontAwesomeIcon icon={faList} />Automatic order summary</li>
+                                            <li><FontAwesomeIcon icon={faXmark} />Dynamicdeletion</li>
                                         </ul>
                                         <Card.Link target='_blank' className={'btn btn-dark'}
                                                    href={urlSandwichesGitHub}>Link Repo</Card.Link>

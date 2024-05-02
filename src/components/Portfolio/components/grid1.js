@@ -23,14 +23,14 @@ function Grid1() {
                                     <Card.Img variant='top' src={jpgBlog}/>
                                     <Card.Body>
                                         <ul className={'list-unstyled p-2'}>
-                                            <li><FontAwesomeIcon icon={faReact} color='#000'/>React</li>
-                                            <li><FontAwesomeIcon icon={faBootstrap} color='#000'/>React Bootstrap</li>
-                                            <li><FontAwesomeIcon icon={faSass} color='#000'/>Sass</li>
-                                            <li><FontAwesomeIcon icon={faJs} color='#000'/>Java Script</li>
-                                            <li><FontAwesomeIcon icon={faEnvelope} color='#000'/>Email.js</li>
-                                            <li><FontAwesomeIcon icon={faFileExport} color='#000'/>Json</li>
-                                            <li><FontAwesomeIcon icon={faMobile} color='#000'/>Mobile First</li>
-                                            <li><FontAwesomeIcon icon={faSpinner} color='#000'/>Static content loading
+                                            <li><FontAwesomeIcon icon={faReact} />React</li>
+                                            <li><FontAwesomeIcon icon={faBootstrap} />React Bootstrap</li>
+                                            <li><FontAwesomeIcon icon={faSass} />Sass</li>
+                                            <li><FontAwesomeIcon icon={faJs} />Java Script</li>
+                                            <li><FontAwesomeIcon icon={faEnvelope} />Email.js</li>
+                                            <li><FontAwesomeIcon icon={faFileExport} />Json</li>
+                                            <li><FontAwesomeIcon icon={faMobile} />Mobile First</li>
+                                            <li><FontAwesomeIcon icon={faSpinner} />Static content loading
                                             </li>
                                         </ul>
                                         <Card.Link target='_blank' className={'btn btn-dark'} href={urlBlogGitHub}>Link

@@ -23,20 +23,17 @@ function Grid2() {
                                 <Card style={{width: '18rem'}}>
                                     <Card.Img variant='top' src={jpgPortfolio}/>
                                     <Card.Body>
-                                        {/*<Card.Title>Card Title</Card.Title>*/}
                                         <ul className={'list-unstyled p-2'}>
-                                            <li><FontAwesomeIcon icon={faReact} color='#000'/>React</li>
-                                            <li><FontAwesomeIcon icon={faBootstrap} color='#000'/>React
+                                            <li><FontAwesomeIcon icon={faReact} />React</li>
+                                            <li><FontAwesomeIcon icon={faBootstrap} />React
                                                 Bootstrap
                                             </li>
-                                            <li><FontAwesomeIcon icon={faSass} color='#000'/>Sass</li>
-                                            <li><FontAwesomeIcon icon={faEnvelope} color='#000'/>Email.js
-                                            </li>
-                                            <li><FontAwesomeIcon icon={faMap} color='#000'/>React-leaflet
-                                            </li>
-                                            <li><FontAwesomeIcon icon={faJs} color='#000'/>Java Script</li>
-                                            <li><FontAwesomeIcon icon={faFileExport} color='#000'/>Json</li>
-                                            <li><FontAwesomeIcon icon={faMobile} color='#000'/>Mobile First
+                                            <li><FontAwesomeIcon icon={faSass} />Sass</li>
+                                            <li><FontAwesomeIcon icon={faEnvelope} />Email.js</li>
+                                            <li><FontAwesomeIcon icon={faMap} />React-leaflet</li>
+                                            <li><FontAwesomeIcon icon={faJs} />Java Script</li>
+                                            <li><FontAwesomeIcon icon={faFileExport} />Json</li>
+                                            <li><FontAwesomeIcon icon={faMobile} />Mobile First
                                             </li>
                                         </ul>
                                         <Card.Link target='_blank' className={'btn btn-dark'}

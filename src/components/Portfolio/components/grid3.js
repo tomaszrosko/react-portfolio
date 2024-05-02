@@ -24,12 +24,10 @@ function Grid3() {
                                     <Card.Img variant='top' src={jpgShopSample}/>
                                     <Card.Body>
                                         <ul className={'list-unstyled p-2'}>
-                                            <li><FontAwesomeIcon icon={faReact} color='#000'/>React</li>
-                                            <li><img src={svgTailwindCss} alt="Tailwind Css"
-                                                     title="Tailwind Css"/>Tailwind Css
-                                            </li>
-                                            <li><FontAwesomeIcon icon={faSass} color='#000'/>Sass</li>
-                                            <li><FontAwesomeIcon icon={faJs} color='#000'/>Java Script</li>
+                                            <li><FontAwesomeIcon icon={faReact} />React</li>
+                                            <li><img src={svgTailwindCss} alt="Tailwind Css"title="Tailwind Css"/>Tailwind Css</li>
+                                            <li><FontAwesomeIcon icon={faSass} />Sass</li>
+                                            <li><FontAwesomeIcon icon={faJs} />Java Script</li>
                                         </ul>
                                         <Card.Link target='_blank' className={'btn btn-dark'}
                                                    href={urlShopSampleGitHub}>Link Repo</Card.Link>
